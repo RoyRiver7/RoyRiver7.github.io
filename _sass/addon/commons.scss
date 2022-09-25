@@ -883,20 +883,38 @@ $sidebar-display: "sidebar-display";
 
 /* --- top-bar --- */
 
-#topbar-wrapper {
-  height: $topbar-height;
-  position: fixed;
-  top: 0;
-  left: $sidebar-width; /* same as sidebar width */
-  right: 0;
-  transition: top 0.2s ease-in-out;
-  z-index: 50;
-  border-bottom: 1px solid rgba(194, 18, 18, 0.705);
-  background-color: var(--topbar-wrapper-bg);
+// #topbar-wrapper {
+//   height: $topbar-height;
+//   position: fixed;
+//   top: 0;
+//   left: $sidebar-width; /* same as sidebar width */
+//   right: 0;
+//   transition: top 0.2s ease-in-out;
+//   z-index: 50;
+//   border-bottom: 1px solid rgba(194, 18, 18, 0.705);
+//   background-color: var(--topbar-wrapper-bg);
 
-  [data-topbar-visible=false] & {
-    top: -$topbar-height; /* same as topbar height. */
-  }
+//   [data-topbar-visible=false] & {
+//     top: -$topbar-height; /* same as topbar height. */
+//   }
+// }
+#topbar-wrapper {
+
+	background: linear-gradient(-45deg, #683728, #552236, #1c4757, #164238);
+	background-size: 400% 400%;
+	animation: w 10s ease infinite;
+	height: 5vh;
+}
+@keyframes w {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 #topbar {
@@ -1562,6 +1580,8 @@ $sidebar-display: "sidebar-display";
 
   #sidebar {
     width: $sidebar-width-large;
+
+
 
     .profile-wrapper {
       margin-top: 4rem;
